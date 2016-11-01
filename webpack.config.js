@@ -34,6 +34,11 @@ var commonConfig = {
       template: 'static/index.html',
       inject: 'body',
       filename: 'index.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: 'static/spaces.html',
+      inject: 'body',
+      filename: 'spaces.html'
     })
   ],
   postcss: [ autoprefixer( { browsers: ['last 2 versions'] } ) ],
@@ -46,6 +51,7 @@ if (TARGET_ENV === 'development') {
     entry: [
       'webpack-dev-server/client?http://localhost:8080',
       'bootstrap-loader',
+      path.join(__dirname, 'static/spaces.js'),
       path.join(__dirname, 'static/index.js')
     ],
     devServer: {
@@ -74,7 +80,8 @@ if (TARGET_ENV === 'production') {
   module.exports = merge(commonConfig, {
     entry: [
       'bootstrap-loader',
-      path.join(__dirname, 'static/index.js')
+      path.join(__dirname, 'static/index.js'),
+      path.join(__dirname, 'static/spaces.js'),
     ],
     module: {
       loaders: [

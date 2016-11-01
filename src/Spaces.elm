@@ -1,5 +1,5 @@
 
-module Main exposing (..)
+module Spaces exposing (..)
 
 -- Elm Core
 import Html exposing (..)
@@ -48,11 +48,7 @@ view model =
   [
     div [ class "row"]
       [
-        div [class "col-md-12"] [ img [ src "/img/Rocket.Platform@1x.png", class "rounded mx-auto d-block" ] [] ]
-      ],
-    div [ class "row"]
-      [
-        div [class "col-md-12"] [ p [class "display-3 mt-2 text-md-center font-weight-bold"] [text "Rocket.UI for Rocket.Platform"] ]
+        div [class "col-md-12"] [ p [class "display-3 mt-2 text-md-center font-weight-bold"] [text "Rocket Spaces"] ]
       ],
     div [ class "row"]
       [
